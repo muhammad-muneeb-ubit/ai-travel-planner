@@ -1,0 +1,29 @@
+Phase 1
+Mock data 
+   ↓
+Phase 2
+Deterministic tools
+   ↓
+Phase 3
+TravelState
+   ↓
+Phase 4
+Basic workflow
+   ↓
+Phase 5
+Agents
+   ↓
+Phase 6
+Conditional routing
+   ↓
+Phase 7
+Replanning loop
+   ↓
+Phase 8
+HITL
+   ↓
+Phase 9
+Real APIs
+   ↓
+Phase 10
+Frontend
