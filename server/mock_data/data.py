@@ -675,3 +675,16 @@ ACTIVITIES = [
         "price": 35
     },
 ]
+
+PROGRESS_MESSAGES = {
+    "parse_request": "Understanding your travel request...",
+    "apply_defaults": "Preparing your travel preferences...",
+    "flight_agent": "Finding the best flights...",
+    "hotel_agent": "Finding the best hotels...",
+    "activity_agent": "Finding the best activities...",
+    "travel_planner": "Travel planner is selecting the best trip...",
+    "calculate_budget": "Calculating your trip cost...",
+    "check_budget": "Checking your budget...",
+    "replan_with_llm": "Optimizing your trip...",
+    "create_final_plan": "Finalizing your trip..."
+}

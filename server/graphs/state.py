@@ -59,3 +59,5 @@ class TravelState(TypedDict):
     replan_attempts: int
 
     final_plan: dict
+    
+    progress_message: str # remove

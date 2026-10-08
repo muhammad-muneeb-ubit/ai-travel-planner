@@ -1,11 +1,10 @@
 from langgraph.graph import StateGraph, START, END
 from graphs.state import TravelState
 from graphs.nodes import parse_request, apply_defaults, calculate_budget, check_budget,  create_final_plan, route_after_budget_check
-from agents.travel_planner import replan_with_llm
+from agents.travel_planner import replan_with_llm, travel_planner
 from agents.flight_agent import flight_agent
 from agents.hotel_agent import hotel_agent
 from agents.activity_agent import activity_agent
-from agents.travel_planner import travel_planner
 
 
 graph = StateGraph(TravelState)
