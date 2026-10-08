@@ -1,0 +1,70 @@
+1. Basic prompts
+I want to visit Dubai for 5 days with a $1000 budget.
+Plan a 4-day trip to Istanbul with a $700 budget.
+I want to visit Bangkok for 5 days with a $600 budget.
+Plan a 3-day trip to Kuala Lumpur with a $500 budget.
+2. With hotel preference
+I want to visit Dubai for 5 days in December with a $1000 budget. I prefer a 4-star hotel.
+Plan a 5-day trip to Istanbul with a $900 budget. I want to stay in a 5-star hotel.
+I want to visit Riyadh for 4 days with a $700 budget and prefer a 3-star hotel.
+Plan a 6-day trip to Bangkok with a $800 budget. I prefer a 4-star hotel.
+3. With interests
+I want to visit Dubai for 5 days with a $1000 budget. I'm interested in sightseeing, food, and culture.
+Plan a 4-day trip to Istanbul with a $800 budget. I like history, culture, and food.
+I want to visit Bangkok for 5 days with a $700 budget. I'm interested in food, shopping, and nightlife.
+Plan a 5-day trip to Kuala Lumpur with a $600 budget. I like sightseeing, food, and nature.
+4. Hotel + interests
+I want to visit Dubai for 5 days in December with a $1000 budget. I prefer a 4-star hotel and I'm interested in sightseeing, food, and culture.
+Plan a 5-day trip to Istanbul with a $900 budget. I want a 3-star hotel and I'm interested in history, food, and sightseeing.
+I want to visit Bangkok for 6 days with a $800 budget. I prefer a 4-star hotel and I'm interested in food, shopping, and culture.
+Plan a 4-day trip to Kuala Lumpur with a $600 budget. I prefer a 3-star hotel and I want sightseeing, food, and nature activities.
+5. Good prompts for testing your budget/replan streaming
+
+These are particularly useful for testing the status messages you just implemented.
+
+I want to visit Dubai for 5 days with a $500 budget. I prefer a 3-star hotel and I'm interested in sightseeing, food, and culture.
+
+Expected flow should be something like:
+
+Parsing your request...
+Applying travel preferences...
+Finding best flights...
+Finding best hotels...
+Finding best activities...
+Planning your trip...
+Checking budget...
+Budget exceeded...
+Replanning your trip...
+Checking budget...
+Replanning your trip...
+Trip planned
+Plan a 5-day trip to London with a $500 budget. I want a 3-star hotel and I'm interested in sightseeing and culture.
+
+This should strongly exercise your budget exceeded → replan path because London hotels are expensive in your mock data.
+
+I want to visit Paris for 5 days with a $600 budget. I prefer a 4-star hotel and I'm interested in sightseeing, food, and culture.
+Plan a 6-day trip to Dubai with a $400 budget. I want a 5-star hotel and activities related to sightseeing, food, and culture.
+
+This is a good extreme budget test.
+
+6. Test missing/default values
+I want to visit Dubai for 5 days with a $1000 budget.
+
+Tests your defaults:
+
+hotel_preference → 3-star
+interests → sightseeing, food, culture
+Plan a trip to Istanbul with a $700 budget.
+I want to visit Bangkok for 4 days.
+
+This one is useful for checking how your system handles missing budget.
+
+Plan a 5-day trip to Kuala Lumpur with a $700 budget. I'm interested in food and culture.
+
+Tests missing hotel preference.
+
+7. Different countries/cities
+I want to visit Riyadh for 5 days with a $900 budget. I prefer a 4-star hotel and I'm interested in culture, sightseeing, and food.
+Plan a 5-day trip to London with a $1500 budget. I prefer a 4-star hotel and I'm interested in history, sightseeing, and culture.
+I want to visit Paris for 4 days with a $1200 budget. I prefer a 3-star hotel and I'm interested in art, food, and sightseeing.
+Plan a 5-day trip to Istanbul with a $700 budget. I prefer a 3-star hotel and I'm interested in history, culture, and food.
